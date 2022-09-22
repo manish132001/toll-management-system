@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toll Management System</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+
+    <div class="search-container">
+      <form action=>
+        <input type="text" placeholder="Search any Vehicle.." name="search" id="searchvehicle">
+        <button style="margin-left: 0px;" type="submit"><i class="fa fa-search" style="padding: 3px;"></i></button>
+      </form>
+    </div>
+    <div class="filter" id="filter"><i class="fa fa-filter" style="font-size:24px;color: white;margin-bottom:2px"></i></div>
+    <div class="float-dropdown">
+      <select id="float-select" required="required">
+        <option value="">Select Toll Name</option>
+        
+      </select>
+      </div>
+    <button data-modal-target="#modal">Add New Toll</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Add New Toll</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div>Toll Name:<input id="addnewtoll" type="text" required="required"></div>
+          Vehicle fare details:
+          <div>
+            <select name="vehicle" id="newtoll1" required="required">
+              <option value="">select vehicle type</option>
+              <option value="carjeepvan">car/jeep/van</option>
+              <option value="LCV">LCV</option>
+              <option value="truckbus">truck/bus</option>
+              <option value="heavyvehicle">heavy vehicle</option>
+            </select>
+            <input type="numbers" placeholder="single journey" required="required" id="newtoll1single">
+            <input type="numbers" placeholder="return journey" required="required" id="newtoll1return">
+          </div>
+          <div>
+            <select name="vehicle" id="newtoll2" required="required">
+              <option value="">select vehicle type</option>
+              <option value="carjeepvan">car/jeep/van</option>
+              <option value="LCV">LCV</option>
+              <option value="truckbus">truck/bus</option>
+              <option value="heavyvehicle">heavy vehicle</option>
+            </select>
+            <input type="numbers" placeholder="single journey" required="required" id="newtoll2single">
+            <input type="numbers" placeholder="return journey" required="required" id="newtoll2return">
+          </div>
+          <div>
+            <select name="vehicle" id="newtoll3" required="required">
+              <option value="">select vehicle type</option>
+              <option value="carjeepvan">car/jeep/van</option>
+              <option value="LCV">LCV</option>
+              <option value="truckbus">truck/bus</option>
+              <option value="heavyvehicle">heavy vehicle</option>
+            </select>
+            <input type="numbers" placeholder="single journey" required="required" id="newtoll3single">
+            <input type="numbers" placeholder="return journey" required="required" id="newtoll3return">
+          </div>
+          <div>
+            <select name="vehicle" id="newtoll4" required="required">
+              <option value="">select vehicle type</option>
+              <option value="carjeepvan">car/jeep/van</option>
+              <option value="LCV">LCV</option>
+              <option value="truckbus">truck/bus</option>
+              <option value="heavyvehicle">heavy vehicle</option>
+            </select>
+            <input type="numbers" placeholder="single journey" required="required" id="newtoll4single">
+            <input type="numbers" placeholder="return journey" required="required" id="newtoll4return">
+          </div>
+          <button type="submit" id="submittoll">Submit</button>
+        </form>
+      </div>
+    </div>
+
+
+    <button id="newvehicle">Add new vehicle</button>
+    <button id="alltolls">View All Tolls</button>
+
+  </div>
+  <div  id="overlay"></div>
+
+<!-- table -->
+<table class="styled-table" id="tbl">
+  <thead id="thead">
+      <tr>
+          <th>Vehicle Type</th>
+          <th>Vehicle Number</th>
+          <th>Date/Time</th>
+          <th>Toll Name</th>
+          <th>Tariff</th>
+      </tr>
+  </thead>
+  <tbody id="tbody">
+      <!-- <tr>
+          <td>Dom</td>
+          <td>6000</td>
+      </tr>
+      <tr class="active-row">
+          <td>Melissa</td>
+          <td>5150</td>
+      </tr> -->
+      <!-- and so on... -->
+  </tbody>
+</table
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+
+
+</body>
+
+</html>
